@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register | Qi Events</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+  <script src="assets/javascript/mapa.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="assets/img/logo.svg" alt="QiEvents logo" class="header__logo">
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a href="">See all events</a></li>
+          <li><a href="">Register your event</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="map"></div>
+
+  <div id="form">
+    <form action="/pontos" method="post">
+      <div>
+        <label for="name">Nome:</label>
+        <input type="text" id="nome" />
+      </div>
+      <div>
+        <button type="button" onclick="salvar()">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnfTZOnoLTtbNbxD4z2qyJXP62diczb8k&callback=initMap&libraries=&v=weekly"
+    async
+  ></script>
+</body>
+</html>
