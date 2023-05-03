@@ -8,8 +8,8 @@ const addPonto = async (request, response) => {
     console.log(geometria);
 
     Ponto.create({nome, geometria})
-        .then(()=> response.status(200).send('Ponto salvo!'))
-        .catch(err => response.status(400).send('Falha ao salvar'));
+        .then(()=> response.sendStatus(200))
+        .catch(err => response.sendStatus(400));
 };
 
 let pontos;
@@ -20,7 +20,6 @@ const getPontos = async (request, response) => {
 
 const sincronizar = async(request, response) => {
     await Ponto.sync();
-    response.status(200).send('Sincronizado');
 };
 
 module.exports = {addPonto, sincronizar, getPontos, pontos};

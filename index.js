@@ -12,7 +12,7 @@ const pontoController = require('./controllers/PontoController')
 pontoController.sincronizar();
 
 app.get('/', pontoController.sincronizar);
-app.get('/pontos', pontoController.getPontos);
+app.get('/getPontos', pontoController.getPontos);
 app.post('/pontos', pontoController.addPonto);
 
 app.listen(port, ()=>{
