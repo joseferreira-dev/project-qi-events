@@ -9,11 +9,13 @@
 <body>
   <header class="header">
     <div class="container">
-      <img src="assets/img/logo.svg" alt="QiEvents logo" class="header__logo">
+      <a href="index.html">
+        <img src="assets/img/logo.svg" alt="QiEvents logo" class="header__logo">
+      </a>
       <nav class="header__nav">
         <ul class="nav__list">
-          <li><a href="">See all events</a></li>
-          <li><a href="">Register your event</a></li>
+          <li><a href="assets/img/show.html">See all events</a></li>
+          <li><a href="register.html">Register your event</a></li>
         </ul>
       </nav>
     </div>
@@ -22,13 +24,18 @@
   <div id="map"></div>
 
   <div id="form">
+    <h1>Insert your event details</h1>
     <form action="/pontos" method="post">
-      <div>
-        <label for="name">Nome:</label>
+      <div class="input__group">
+        <label for="name">Name:</label>
         <input type="text" id="nome" />
       </div>
-      <div>
-        <button type="button" onclick="salvar()">Salvar</button>
+      <div class="input__group">
+        <label for="descricao">Description:</label>
+        <textarea type="text" id="descricao"></textarea>
+      </div>
+      <div class="input__group">
+        <button class="button button__primary" type="button" onclick="salvar()">Salvar</button>
       </div>
     </form>
   </div>

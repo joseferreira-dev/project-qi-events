@@ -6,6 +6,10 @@ const Ponto = database.define('ponto',{
         type: Sequelize.STRING,
         allowNull: false
     },
+    description:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     geometria:{
         type: Sequelize.GEOMETRY('GEOMETRY'),
         allowNull: false

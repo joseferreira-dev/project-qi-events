@@ -7,7 +7,7 @@ const addPonto = async (request, response) => {
 
     console.log(geometria);
 
-    Ponto.create({nome, geometria})
+    Ponto.create({nome, description, geometria})
         .then(()=> response.sendStatus(200))
         .catch(err => response.sendStatus(400));
 };

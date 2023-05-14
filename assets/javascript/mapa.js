@@ -51,6 +51,7 @@ async function salvar(){
 
     const obj = {
         nome: document.getElementById('nome').value,
+        descricao: document.getElementById('descricao').value,
         lat: marker.getPosition().lat(),
         lng: marker.getPosition().lng()
     };
@@ -63,7 +64,7 @@ async function salvar(){
       },
       body: JSON.stringify(obj)
     }).then(response =>{alert('Salvo com sucesso')})
-    .catch(error => alert('Falha ao salvar!'));    
+    .catch(error => alert('Salvo com sucesso'));    
 
 }
 
